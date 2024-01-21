@@ -1,0 +1,16 @@
+h1 {
+  font-size: 55px !important;
+}
+.heading {
+  height: 5%;
+  padding: 5%;
+  background-color: rgb(212, 210, 210);
+}
+
+.first {
+  display: flex;
+}
+.first_img img {
+  height: 10rem;
+  width: 10rem;
+}

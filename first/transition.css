@@ -1,0 +1,67 @@
+/* .expand {
+  background-color: aquamarine;
+  height: 100px;
+  width: 100px;
+  margin: 20%;
+  transition: 1s steps(10, end);
+}
+.expand:hover {
+  transform: translate(150px) scale(1.5);
+  /* height: 200px;
+  width: 200px; */
+/* border-radius: 50%; */
+/* } */
+
+/* div bounce */
+
+/* @keyframe translate {
+  from {
+    transform: translateY(-20%);
+  }
+  25% {
+    transform: translateY(20%);
+  }
+  50% {
+    transform: translateY(-20%);
+  }
+
+  75% {
+    transform: translateY(-10%);
+  }
+  to {
+    transform: translateY(10%);
+  }
+}
+#div1 {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  top: 100px;
+  left: 100px;
+  background-color: aqua;
+  animation: 2s ease-in-out 2;
+  animation-name: translate;
+} */
+
+/* fade in */
+#div1 {
+  height: 40px;
+  width: 250px;
+  position: relative;
+  top: 100px;
+  left: 100px;
+  font-size: 30px;
+  border: solid black;
+  border-width: 3px 0px 3px 0px;
+  text-align: center;
+  padding: 5px;
+  /* animation: fadeIn, ease, 1s, infinite; */
+}
+/* @keyframe fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} */

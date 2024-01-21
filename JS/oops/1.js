@@ -20,22 +20,40 @@ function main() {
   };
 
   function getUserDetail(profile, keys) {
-    // Implement your function here
-
-    for (let i in keys) {
-      let val = keys[i];
-      if (val === "undefined") console.log("Not available");
-      else if (val === "address") {
-        let val2 = keys[i + 1];
-        console.log(profile.address[val2]);
-      } else console.log(profile[val]);
+    const n = keys.length;
+    let result = "";
+    for (let i = 0; i < n; i++) {
+      if (keys[i] === "") result = "Not available";
+      else if (keys[i] === "address") {
+        for (let j = i + 1; j < n; j++) {
+          result = `${result} ${profile.address[keys[j]]}`;
+        }
+        break;
+      } else {
+        result = `${result} ${profile[keys[i]]}`;
+      }
     }
-  }
 
-  //console.log(getUserDetail(userProfile, ["address", "city"]));
-  console.log(getUserDetail(userProfile, ["name","email"]));
+    result.trim();
+    return result;
+  }
+  console.log(getUserDetail(userProfile, ["address", "city"]));
   // Usage: should return "New York"
   //do not modify the return statement
   return getUserDetail;
 }
 main();
+
+// function getUserDetail(profile, keys) {
+//   let value = profile;
+
+//   for (const key of keys) {
+//     if (!(key in value)) {
+//       return "Not available";
+//     }
+
+//     value = value[key];
+//   }
+
+//   return value;
+// }
